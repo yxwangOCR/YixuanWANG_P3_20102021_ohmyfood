@@ -1,0 +1,14 @@
+{
+  "name": "projet3_ohmyfood_sass",
+  "version": "1.0.0",
+  "description": "p3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "author": "王逸萱",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.43.2"
+  }
+}
