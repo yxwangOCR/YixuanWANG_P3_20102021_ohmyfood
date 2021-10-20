@@ -395,6 +395,15 @@ nav img {
 }
 
 /**** Other pages : Restaurants menus ****/
+.page-head .fa-arrow-left {
+  position: absolute;
+  /*The arrow is fixed to the left (箭头固定在左边)*/
+  padding: 1rem 1rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
 .restaurant_menu {
   background-color: #f6f6f6;
   width: 100%;
@@ -415,6 +424,24 @@ nav img {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
+}
+
+.restaurant_menu .restaurant-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.restaurant_menu .restaurant-name h1 {
+  font-family: "Shrikhand", cursive;
 }
 
 .restaurant_menu .menu-content-container {
@@ -448,7 +475,7 @@ nav img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-  background-color: aqua;
+  border: 2px dashed black;
   margin: 1rem;
   padding: 2rem;
 }
@@ -460,7 +487,7 @@ nav img {
 }
 
 .restaurant_menu .menu-content-container .menu-content .dishes {
-  background-color: antiquewhite;
+  border: 1px solid black;
   padding: 2rem;
   border-radius: 22px;
   width: 20rem;
@@ -471,6 +498,18 @@ nav img {
   .restaurant_menu .menu-content-container .menu-content .dishes {
     width: 100%;
   }
+}
+
+.restaurant_menu .order-button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eb73da), to(#a05adc));
+  background-image: linear-gradient(to bottom, #eb73da, #a05adc);
+  border-radius: 22px;
+  padding: 0.8rem 2rem;
+  margin: 1rem;
+  color: white;
+  border: 0px;
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
 }
 
 /*Footer*/
