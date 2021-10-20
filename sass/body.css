@@ -247,7 +247,6 @@
 }
 
 /* How to remove aria-hidden ="true" on icon? */
-/*No Linear Gradients, NOT OK:*/
 .heart {
   position: relative;
 }
@@ -272,9 +271,19 @@
 
 .full-heart:hover {
   color: #9356dc;
+  /*No Linear Gradients*/
   opacity: 1;
 }
 
+/*reference: https://codepen.io/ismailfarooq/pen/wewNxx
+background: linear-gradient(to bottom, #eb73da, #a05adc);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) 
+s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.
+
+The -webkit-text-fill-color CSS property specifies the fill color of characters of text. 
+If this property is not set, the value of the color property is used.*/
 /**** Other pages : Restaurants menus ****/
 .page-head .fa-arrow-left {
   position: absolute;
@@ -305,16 +314,6 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
-  /*
-    .fa-check-circle{
-        transform: rotate(0deg);
-}
-    .dishes:hover{
-        .fa-check-circle{
-            transform: rotate(-360deg);
-            transition: transform 500ms ease-in-out;
-    }
-    }*/
 }
 
 .restaurant_menu .restaurant-name .fa-heart {
@@ -443,10 +442,39 @@
   cursor: pointer;
 }
 
+.restaurant_menu .dishes:hover .fa-check-circle {
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-name: icon-turn;
+          animation-name: icon-turn;
+}
+
+@-webkit-keyframes icon-turn {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+            transform: rotate(-1turn);
+  }
+}
+
+@keyframes icon-turn {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+            transform: rotate(-1turn);
+  }
+}
+
 .restaurant_menu .dishes:hover .green-bloc {
   display: inline-block;
-  -webkit-animation-duration: 280ms;
-          animation-duration: 280ms;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
   -webkit-animation-name: bloc-slidein;
           animation-name: bloc-slidein;
 }
