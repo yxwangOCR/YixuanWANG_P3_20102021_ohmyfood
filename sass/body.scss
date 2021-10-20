@@ -278,7 +278,6 @@
             padding: 2rem;
             width: 100%;
         & .dishes{
-                padding: 2rem;
                 border-radius: 22px;
                 height: 5rem;
                 background-color: white;
@@ -298,20 +297,55 @@
                         opacity: 1;
                       }
                 }
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 0 1rem 1rem;
+                flex: 1 1 auto;
+                gap: 0.5rem;
+    }
+
+    .price{
+        padding: 1rem;
     }
 
     .green-bloc{
-          background-color: #99e2d0;  
+          background-color: #99e2d0; 
+          color: white; 
           border-radius: 0 22px 22px 0;
           width: 5rem;
           height: 5rem;
+          padding: 2rem;
           display: none;
     }
     .dishes:hover{
         .green-bloc{
             display: inline-block;
+            animation-duration: 280ms;
+            animation-name: bloc-slidein;
+                @keyframes bloc-slidein { 
+                     from{
+                        transform: translateX(0.3rem);
+                        opacity: 0;
+                      }
+                      to{
+                        transform: translateX(0rem);
+                        opacity: 1;
+                      }
+                }
         }
     }
+
+    /*
+    .fa-check-circle{
+        transform: rotate(0deg);
+}
+    .dishes:hover{
+        .fa-check-circle{
+            transform: rotate(-360deg);
+            transition: transform 500ms ease-in-out;
+    }
+    }*/
 
 
     & .order-button{

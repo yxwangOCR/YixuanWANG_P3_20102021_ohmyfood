@@ -424,6 +424,16 @@ nav img {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
+  /*
+    .fa-check-circle{
+        transform: rotate(0deg);
+}
+    .dishes:hover{
+        .fa-check-circle{
+            transform: rotate(-360deg);
+            transition: transform 500ms ease-in-out;
+    }
+    }*/
 }
 
 .restaurant_menu .restaurant-name .fa-heart {
@@ -476,7 +486,6 @@ nav img {
 }
 
 .restaurant_menu .menu-content-container .menu-content .dishes {
-  padding: 2rem;
   border-radius: 22px;
   height: 5rem;
   background-color: white;
@@ -489,6 +498,20 @@ nav img {
           animation-duration: 3s;
   -webkit-animation-name: card-slidein;
           animation-name: card-slidein;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0 1rem 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  gap: 0.5rem;
 }
 
 @-webkit-keyframes card-slidein {
@@ -517,16 +540,52 @@ nav img {
   }
 }
 
+.restaurant_menu .price {
+  padding: 1rem;
+}
+
 .restaurant_menu .green-bloc {
   background-color: #99e2d0;
+  color: white;
   border-radius: 0 22px 22px 0;
   width: 5rem;
   height: 5rem;
+  padding: 2rem;
   display: none;
 }
 
 .restaurant_menu .dishes:hover .green-bloc {
   display: inline-block;
+  -webkit-animation-duration: 280ms;
+          animation-duration: 280ms;
+  -webkit-animation-name: bloc-slidein;
+          animation-name: bloc-slidein;
+}
+
+@-webkit-keyframes bloc-slidein {
+  from {
+    -webkit-transform: translateX(0.3rem);
+            transform: translateX(0.3rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes bloc-slidein {
+  from {
+    -webkit-transform: translateX(0.3rem);
+            transform: translateX(0.3rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    opacity: 1;
+  }
 }
 
 .restaurant_menu .order-button {
