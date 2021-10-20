@@ -50,10 +50,9 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 1rem;
-  font-size: 0.8rem;
   -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .function-steps li ::before {
