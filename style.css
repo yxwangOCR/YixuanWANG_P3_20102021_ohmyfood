@@ -562,8 +562,8 @@ If this property is not set, the value of the color property is used.*/
 }
 
 .restaurant_menu .dishes:hover .fa-check-circle {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
   -webkit-animation-name: icon-turn;
           animation-name: icon-turn;
 }
@@ -592,8 +592,8 @@ If this property is not set, the value of the color property is used.*/
 
 .restaurant_menu .dishes:hover .green-bloc {
   display: inline-block;
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
   -webkit-animation-name: bloc-slidein;
           animation-name: bloc-slidein;
 }

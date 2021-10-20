@@ -335,7 +335,7 @@ If this property is not set, the value of the color property is used.*/
     .dishes:hover{
         cursor: pointer;
         .fa-check-circle{
-            animation-duration: 300ms;
+            animation-duration: 500ms;
             animation-name: icon-turn;
             @keyframes icon-turn{
                 from {
@@ -348,7 +348,7 @@ If this property is not set, the value of the color property is used.*/
     }
         .green-bloc{
             display: inline-block;
-            animation-duration: 300ms;
+            animation-duration: 500ms;
             animation-name: bloc-slidein;
                 @keyframes bloc-slidein { 
                      from{
