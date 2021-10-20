@@ -2,12 +2,7 @@
 footer {
   background-color: #353535;
   padding: 2rem;
-}
-
-@media (max-width: 685px) {
-  footer {
-    height: auto;
-  }
+  height: auto;
 }
 
 .footer-list {
@@ -18,7 +13,7 @@ footer {
       justify-content: space-around;
 }
 
-@media (max-width: 685px) {
+@media (max-width: 750px) {
   .footer-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

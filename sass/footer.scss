@@ -2,15 +2,13 @@
 footer {
     background-color: #353535;
     padding: 2rem;
-    @media (max-width: 685px){
-        height: auto;
-    }
+    height: auto;
   }
   
   .footer-list {
     display: flex;
     justify-content: space-around;
-    @media (max-width: 685px){
+    @media (max-width: 750px){
         flex-direction: column;
         gap: 1rem;  
     }

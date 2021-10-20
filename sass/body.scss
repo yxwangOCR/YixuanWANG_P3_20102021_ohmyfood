@@ -6,7 +6,7 @@
     padding: 1rem;
     margin: 1rem;
     & h3{
-        padding: 1rem;
+        padding: 1rem 0;
     }
 }
 
@@ -43,7 +43,7 @@
 .function-steps a i{
     color: #7e7e7e;
 }
-.function-steps a:hover i, a:hover{
+.function-steps a:hover i, a:hover{ /*icon and link change color at the same time*/
         color: #9356dc;
         }
 
@@ -59,30 +59,128 @@
         left:-2rem;
         }
 
+
+             
+/*funtion-steps : 2nd try with counter-reset, Numbers do NOT work*/
+/*.function-steps{
+    padding: 1rem;
+    margin: 1rem;
+    counter-reset: steps; /*命名
+    /*& ol{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        @media (max-width: 850px) {
+            flex-direction: column;
+        }
+        & :hover{
+            background-color: #f5edff;
+        }
+    }
+    & li{
+        /* Does NOT work because of aria-hidden="true" ??
+        & i.fas {
+            margin-right: 1rem;
+            color: aqua;
+            font-size: 2rem;
+            }*/
+            /*& ::before{
+                content: counter(steps); /*呼叫命名
+                counter-increment: steps;
+                /*number style
+                position:absolute;
+                /* display: block;
+                color: #f6f6f6;
+                background: #9356dc;
+                border-radius: 50%;
+                font-size: 1rem;
+                width: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+                text-align: center;
+                top: 21px;
+                left: -16px;
+                
+                }
+            position: relative;
+            padding-left: 60px;
+            list-style-type: none;/*去掉原先ol的数字*/
+           /*min-height: 60px; list-style: decimal;*/
+
+        /*& img{
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
+        & .step-container{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+        }
+        /*tags style*/
+       /* background-color: #f6f6f6;
+        text-align:center;
+        border-radius: 22px;
+        flex-grow: 1;
+        padding: 1rem;
+        box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
+        margin: 1rem;
+    }
+}
+
+/*tags : 1st try without animation & numbers
+.tag-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  
+  .tag-list {
+    display: flex;
+    gap: 2rem;
+    @media (max-width: 850px) {
+          flex-direction: column;
+      }
+  }
+  
+  .tag {
+    width: 16rem;
+    border-radius: 22px;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
+    background-color: #f2f2f2;
+  }*/
+
+
 /********* <<<<<< Home page : Restaurant cards >>>>>>**********/
 .restaurant-container{
         padding: 2rem;
         background-color: #f6f6f6;
-        min-height: 50vh;
+        min-height: 46vh;
         }
         
 .restaurant-card-list{
         display: flex;
-        padding: 3rem;
+        padding: 2rem;
         gap: 2rem;
-        @media (max-width: 685px){
+       @media (max-width: 970px){
             flex-direction: column;
-          }
+            align-items: center;
+        }
         }
         
 .restaurant-card-link{
-        width: 50%;
+        width: 100%;
         border-radius: 22px;
         text-decoration: none;
         box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
-        @media (max-width: 685px){
-            width: 100%;
-          }
         }
 .restaurant-card{
         border-radius: 22px;
@@ -98,17 +196,38 @@
           background-color: white;
           display: flex;
           justify-content: space-between;
-          padding: 0.5rem;
+          padding: 0.5rem 2rem;
           color: black;
           border-radius: 0 0 22px 22px;
-          height: 4rem;
-          font-size: 0.8rem;
+          height: auto;
         }
 
 
+/* How to remove aria-hidden ="true" on icon? */
+/*No Linear Gradients, NOT OK:*/
+.heart{
+    position: relative;
+}
+.empty-heart, .full-heart {
+    position: absolute; /*Two hearts overlapping*/
+}
+.empty-heart{
+    color: black;
+    opacity: 1;
+}
+.empty-heart:hover{
+    opacity: 0;
+}
+.full-heart{
+    opacity: 0;
+}
+.full-heart:hover{
+    color: #9356dc;
+    opacity: 1;
+}
 
 
-/**** Other pages : Pestaurants menus ****/
+/**** Other pages : Restaurants menus ****/
     .restaurant_menu{
         background-color: #f6f6f6;
         width: 100%;
