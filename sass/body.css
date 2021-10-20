@@ -366,19 +366,19 @@
   width: 100%;
 }
 
-.restaurant_menu .menu-content-container .menu-content .dishes {
+.restaurant_menu .menu-content-container .menu-content h3 {
+  border-bottom: 4px solid #99e2d0;
+  border-bottom-width: auto;
+  padding-bottom: 4px;
+  width: 2.5rem;
+}
+
+.restaurant_menu .dishes {
   border-radius: 22px;
   height: 5rem;
   background-color: white;
   -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
-}
-
-.restaurant_menu .dishes {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-name: card-slidein;
-          animation-name: card-slidein;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,6 +393,10 @@
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   gap: 0.5rem;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: card-slidein;
+          animation-name: card-slidein;
 }
 
 @-webkit-keyframes card-slidein {
@@ -433,6 +437,10 @@
   height: 5rem;
   padding: 2rem;
   display: none;
+}
+
+.restaurant_menu .dishes:hover {
+  cursor: pointer;
 }
 
 .restaurant_menu .dishes:hover .green-bloc {

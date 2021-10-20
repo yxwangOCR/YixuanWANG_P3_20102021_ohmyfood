@@ -277,15 +277,25 @@
             margin: 1rem;
             padding: 2rem;
             width: 100%;
-        & .dishes{
-                border-radius: 22px;
-                height: 5rem;
-                background-color: white;
-                box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
+        & h3{
+             border-bottom: 4px solid #99e2d0;
+             border-bottom-width: auto;
+             padding-bottom: 4px;
+             width: 2.5rem;
         }
         }
     }
-    .dishes{    animation-duration: 3s;
+    .dishes{    border-radius: 22px;
+                height: 5rem;
+                background-color: white;
+                box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 0 1rem 1rem;
+                flex: 1 1 auto;
+                gap: 0.5rem;
+                animation-duration: 3s;
                 animation-name: card-slidein;
                 @keyframes card-slidein { 
                      from{
@@ -296,13 +306,7 @@
                         transform: translateY(0rem);
                         opacity: 1;
                       }
-                }
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 1rem 0 1rem 1rem;
-                flex: 1 1 auto;
-                gap: 0.5rem;
+                }        
     }
 
     .price{
@@ -319,6 +323,7 @@
           display: none;
     }
     .dishes:hover{
+        cursor: pointer;
         .green-bloc{
             display: inline-block;
             animation-duration: 280ms;
