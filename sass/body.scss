@@ -1,158 +1,114 @@
 
-/*funtion-steps*/
-.function-steps{
+/*********** <<<<<< Home Page : Fonctionnements >>>>>>**********/
+.function-list-container{
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     margin: 1rem;
-    counter-reset: steps; /*命名*/
-    & ol{
+    & h3{
+        padding: 1rem;
+    }
+}
+
+.function-steps{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    @media (max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.function-steps a{
+        background-color: #f6f6f6;
+        border-radius: 22px;
+        text-decoration: none;
+        color: inherit;
         display: flex;
+        flex: 1 1 auto;
+        align-items: center;
         gap: 1rem;
-        justify-content: center;
+        padding: 1rem;
+        box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
         @media (max-width: 850px) {
-            flex-direction: column;
+            width: 100%;
         }
-        & :hover{
+        &:hover{
             background-color: #f5edff;
         }
     }
 
-    & li{
-        /* Does NOT work because of aria-hidden="true" ??
-        & i.fas {
-            margin-right: 1rem;
-            color: aqua;
-            font-size: 2rem;
-            }*/
-            & ::before{
-                content: counter(steps); /*呼叫命名*/
-                counter-increment: steps;
-                /*number style*/
-                position:absolute;
-                /* display: block;*/
-                color: #f6f6f6;
-                background: #9356dc;
-                border-radius: 50%;
-                font-size: 1rem;
-                width: 2rem;
-                height: 2rem;
-                line-height: 2rem;
-                text-align: center;
-                top: 21px;
-                left: -16px;
-                /**/
-                }
-            position: relative;
-            padding-left: 60px;
-            list-style-type: none;/*去掉原先ol的数字*/
-           /*min-height: 60px; list-style: decimal;*/
+.function-steps a i{
+    color: #7e7e7e;
+}
+.function-steps a:hover i, a:hover{
+        color: #9356dc;
+        }
 
-        & img{
-            width: 1.5rem;
-            height: 1.5rem;
+.function-tag{
+        position: relative;
+        background-color: #9356dc;
+        color: #f6f6f6;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2rem;
+        left:-2rem;
+        }
+
+/********* <<<<<< Home page : Restaurant cards >>>>>>**********/
+.restaurant-container{
+        padding: 2rem;
+        background-color: #f6f6f6;
+        min-height: 50vh;
         }
         
-        & .step-container{
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            align-items: center;
-            padding: 0.5rem;
+.restaurant-card-list{
+        display: flex;
+        padding: 3rem;
+        gap: 2rem;
+        @media (max-width: 685px){
+            flex-direction: column;
+          }
         }
-        /*tags style*/
-        background-color: #f6f6f6;
-        text-align:center;
+        
+.restaurant-card-link{
+        width: 50%;
         border-radius: 22px;
-        flex-grow: 1;
-        padding: 1rem;
+        text-decoration: none;
         box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
-        margin: 1rem;
-    }
-    
-}
+        @media (max-width: 685px){
+            width: 100%;
+          }
+        }
+.restaurant-card{
+        border-radius: 22px;
+        & img {
+            width: 100%;
+            height: 10rem;
+            object-fit: cover;
+            border-radius: 22px 22px 0 0;
+          }
+        }
+        
+.restaurant-title{
+          background-color: white;
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5rem;
+          color: black;
+          border-radius: 0 0 22px 22px;
+          height: 4rem;
+          font-size: 0.8rem;
+        }
 
-/*tags
-.tag-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 1rem;
-  }
-  
-  .tag-list {
-    display: flex;
-    gap: 2rem;
-    @media (max-width: 850px) {
-          flex-direction: column;
-      }
-  }
-  
-  .tag {
-    width: 16rem;
-    border-radius: 22px;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
-    background-color: #f2f2f2;
-  }*/
 
-  /*restaurant cards*/
-  .restaurant-container {
-    padding: 2rem;
-    background-color: #f6f6f6;
-    min-height: 50vh;
-    
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;*/
-    
-  }
-  
-  .restaurant-card-list {
-    display: flex;
-    padding: 3rem;
-    gap: 2rem;
-    @media (max-width: 685px){
-        flex-direction: column;
-    }
-  }
-  
-  .restaurant-card-link {
-    width: 50%;
-    border-radius: 22px;
-    text-decoration: none;
-    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .2);
-    @media (max-width: 685px){
-        width: 100%;
-    }
-  }
-  
-  .restaurant-card {
-    border-radius: 22px;
-    /*height: 100%;*/
-    & img {
-      width: 100%;
-      height: 10rem;
-      object-fit: cover;
-      border-radius: 22px 22px 0 0;
-    }
-  }
-  
-  .restaurant-title {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    color: black;
-    border-radius: 0 0 22px 22px;
-    height: 4rem;
-    font-size: 0.8rem;
-    }
 
-    /*restaurant menu*/
+
+/**** Other pages : Pestaurants menus ****/
     .restaurant_menu{
         background-color: #f6f6f6;
         width: 100%;
@@ -176,7 +132,6 @@
             width: 100%;
             align-items: center;
         }
-
         & .menu-content{
             display: flex;
             flex-direction: column;
@@ -187,19 +142,16 @@
             @media(max-width:1300px){
                 width: 100%;
             }
-
+            & .dishes{
+                background-color: antiquewhite;
+                padding: 2rem;
+                border-radius: 22px;
+                width: 20rem;
+                height: 5rem;
+                @media(max-width:1300px){
+                    width: 100%;
+                }
         }
-        & .dishes{
-            background-color: antiquewhite;
-            padding: 2rem;
-            border-radius: 22px;
-            width: 20rem;
-            height: 5rem;
-            @media(max-width:1300px){
-                width: 100%;
-            }
         }
-
-
     }
-    }
+}
