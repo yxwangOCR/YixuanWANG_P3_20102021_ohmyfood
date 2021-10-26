@@ -375,12 +375,7 @@ nav img {
 }
 
 .empty-heart {
-  color: black;
   opacity: 1;
-}
-
-.empty-heart:hover {
-  opacity: 0;
 }
 
 .full-heart {
@@ -388,9 +383,15 @@ nav img {
 }
 
 .full-heart:hover {
-  color: #9356dc;
-  /*No Linear Gradients*/
+  /*opacity: 1;*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation: heart-beat 1s;
+          animation: heart-beat 1s;
 }
 
 /* How to remove aria-hidden ="true" on icon? */
@@ -569,8 +570,8 @@ If this property is not set, the value of the color property is used.*/
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  /*The animation-fill-mode property indicates how a CSS animation should apply styles to its target 
-                before and after execution.
+  /*The animation-fill-mode property indicates how a CSS animation should apply styles 
+                to its target before and after execution.
                 What is the difference between 'both' and 'forwards'?*/
 }
 
