@@ -113,9 +113,15 @@ a:hover {
   opacity: 0;
 }
 .full-heart:hover {
-  /*opacity: 1;*/
-  background: -webkit-gradient(to bottom, #eb73da, #a05adc);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9356dc),
+    to(#ff79da)
+  );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
   /*transform: scale(1.1);*/
@@ -182,7 +188,6 @@ a:hover {
         opacity: 0;
       }
       & .heart-filled:hover {
-        opacity: 1;
         background: -webkit-gradient(
           linear,
           left top,
@@ -191,8 +196,40 @@ a:hover {
           to(#ff79da)
         );
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
+        opacity: 1;
         transform: scale(1.1);
+        animation: heart-spread-effect 5s infinite;
+        @keyframes heart-spread-effect {
+          from {
+            transform: scale(0.75) rotate(35deg);
+            opacity: 1;
+            top: -25%;
+            left: 15%;
+            animation: heart-spread-effect 5s ease-out infinite 1.5s;
+          }
+          25% {
+            transform: scale(1) rotate(35deg);
+            top: -36%;
+            left: 7%;
+            animation: heart-spread-effect 5s ease-out infinite 1s;
+          }
+
+          50% {
+            transform: scale(0.75) rotate(35deg);
+            top: -48%;
+            left: 14%;
+            animation: heart-spread-effect 5s ease-out infinite 0.5s;
+          }
+          to {
+            transform: rotate(35deg) translateY(-10px) translateX(-10px);
+            opacity: 0;
+            top: -53%;
+            left: -3%;
+            animation: heart-spread-effect 5s ease-out infinite;
+          }
+        }
       }
     }
   }
