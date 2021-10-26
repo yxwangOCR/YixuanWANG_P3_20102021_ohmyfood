@@ -374,10 +374,6 @@ nav img {
   /*Two hearts overlapping*/
 }
 
-.empty-heart {
-  opacity: 1;
-}
-
 .full-heart {
   opacity: 0;
 }
@@ -391,7 +387,8 @@ nav img {
   /*transform: scale(1.1);*/
   -webkit-animation: heart-beat 200ms infinite alternate;
           animation: heart-beat 200ms infinite alternate;
-  /*If don’t need a continuous heartbeat, delete ‘infinite alternate’*/
+  /*If don’t need a continuous heartbeat, delete ‘infinite alternate’
+                and keep above 'transform: scale(1.1)'*/
 }
 
 @-webkit-keyframes heart-beat {
@@ -416,6 +413,7 @@ nav img {
   }
 }
 
+/*reference: https://codepen.io/fivera/pen/rzepn*/
 /* How to remove aria-hidden ="true" on icon? */
 /*.heart{
     position: relative;
@@ -480,15 +478,62 @@ If this property is not set, the value of the color property is used.*/
   padding: 2rem;
 }
 
-.restaurant_menu .restaurant-name .fa-heart {
-  /*Heart is fixed to the right*/
+.restaurant_menu .restaurant-name {
+  /*&.fa-heart{ /*Heart is fixed to the right*/
+  /*position: absolute;*/
+  /*right: 2rem;
+        }*/
+}
+
+.restaurant_menu .restaurant-name .heart-spread {
   position: absolute;
+  padding: 1rem 1rem;
   right: 2rem;
+}
+
+.restaurant_menu .restaurant-name .heart-spread .heart-blank, .restaurant_menu .restaurant-name .heart-spread .heart-filled {
+  position: absolute;
+}
+
+.restaurant_menu .restaurant-name .heart-spread .heart-filled {
+  opacity: 0;
+}
+
+.restaurant_menu .restaurant-name .heart-spread .heart-filled:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@-webkit-keyframes heart-spread-effect {
+  from {
+    top: -25%;
+    left: 15%;
+  }
+  to {
+    top: -50%;
+    left: 30%;
+  }
+}
+
+@keyframes heart-spread-effect {
+  from {
+    top: -25%;
+    left: 15%;
+  }
+  to {
+    top: -50%;
+    left: 30%;
+  }
 }
 
 .restaurant_menu .restaurant-name h1 {
   /*Title is fixed to the right*/
   position: absolute;
+  padding: 1rem 1rem;
   left: 2rem;
   font-family: "Shrikhand", cursive;
 }
