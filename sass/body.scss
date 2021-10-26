@@ -200,15 +200,36 @@
             }
         
 
+            .heart{
+                position: relative;
+            }
+            .empty-heart, .full-heart {
+                position: absolute; /*Two hearts overlapping*/
+            }
+            .empty-heart{
+                color: black;
+                opacity: 1;
+            }
+            .empty-heart:hover{
+                opacity: 0;
+            }
+            .full-heart{
+                opacity: 0;
+                
+            }
+            .full-heart:hover{ 
+                color: #9356dc; /*No Linear Gradients*/
+                opacity: 1;
+            }
 
 /* How to remove aria-hidden ="true" on icon? */
-.heart{
+/*.heart{
     position: relative;
 }
 .empty-heart, .full-heart {
     position: absolute; /*Two hearts overlapping*/
-}
-.empty-heart{
+/*}
+/*.empty-heart{
     color: black;
     opacity: 1;
 }
@@ -221,7 +242,7 @@
 }
 .full-heart:hover{ 
     color: #9356dc; /*No Linear Gradients*/
-    opacity: 1;
+/*  opacity: 1;
 }
 
 /*reference: https://codepen.io/ismailfarooq/pen/wewNxx
@@ -305,8 +326,63 @@ If this property is not set, the value of the color property is used.*/
                 padding: 1rem 0 1rem 1rem;
                 flex: 1 1 auto;
                 gap: 0.5rem;
-                animation-duration: 3s;
-                animation-name: card-slidein;
+        & .dish-1{
+                animation: card-slidein 9s;
+                opacity: 0;
+                animation-fill-mode: forwards; 
+                /*The animation-fill-mode property indicates how a CSS animation should apply styles to its target 
+                before and after execution.
+                What is the difference between 'both' and 'forwards'?*/
+        }
+
+        & .dish-2{
+                animation: card-slidein 9s 1s;
+                opacity: 0;
+                animation-fill-mode: forwards; 
+        }
+
+        & .dish-3{
+            animation: card-slidein 9s 2s;
+            opacity: 0;
+            animation-fill-mode: forwards; 
+        }
+
+        & .dish-4{
+            animation: card-slidein 9s 3s;
+            opacity: 0;
+            animation-fill-mode: forwards; 
+        }
+
+        & .dish-5{
+            animation: card-slidein 9s 4s;
+            opacity: 0;
+            animation-fill-mode: forwards; 
+        }
+
+        & .dish-6{
+            animation: card-slidein 9s 5s;
+            opacity: 0;
+            animation-fill-mode: forwards; 
+        }
+
+        & .dish-7{
+            animation: card-slidein 9s 6s;
+            opacity: 0;
+            animation-fill-mode: forwards; 
+        }
+
+        & .dish-8{
+            animation: card-slidein 9s 7s;
+            opacity: 0;
+            animation-fill-mode: forwards; 
+        }
+
+        & .dish-9{
+            animation: card-slidein 9s 8s;
+            opacity: 0;
+            animation-fill-mode: forwards; 
+        }
+
                 @keyframes card-slidein { 
                      from{
                         transform: translateY(1rem);
