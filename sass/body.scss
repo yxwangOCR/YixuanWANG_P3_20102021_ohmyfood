@@ -200,7 +200,7 @@
             }
         
 
-            .heart{
+.heart{
                 position: relative;
             }
             .empty-heart, .full-heart {
@@ -209,20 +209,29 @@
             .empty-heart{
                 opacity: 1;
             }
-           
             .full-heart{
                 opacity: 0;     
             }
-
             .full-heart:hover{ 
                 /*opacity: 1;*/
                 background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 opacity: 1;
-                transform: scale(1.1);
-                animation: heart-beat 1s;
+                /*transform: scale(1.1);*/
+                animation: heart-beat 200ms infinite alternate;
+                /*If don’t need a continuous heartbeat, delete ‘infinite alternate’
+                and keep above 'transform: scale(1.1)'*/
+                @keyframes heart-beat {
+                    from{
+                        transform: scale(1.1)  
+                    }
+                    to{
+                        transform: scale(1.3)
+                    }
+                }
             }
+/*reference: https://codepen.io/fivera/pen/rzepn*/              
 
 /* How to remove aria-hidden ="true" on icon? */
 /*.heart{
