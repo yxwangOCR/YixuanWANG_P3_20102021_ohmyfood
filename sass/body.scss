@@ -360,7 +360,7 @@ a:hover {
 .order-button:hover {
   transform: scale(1.02);
   opacity: 0.8;
-  background-color: #7e7e7e;
+  color: #eb73da;
 }
 /*Heart Animation*/
 .heart-filled {
@@ -388,17 +388,17 @@ a:hover {
   }
 }
 
-& .heart-1 {
+&.heart-1 {
   top: -25%;
   left: 15%;
   animation: heart-spread-effect 2s ease-out infinite 1.5s;
 }
-& .heart-2 {
+&.heart-2 {
   top: -36%;
   left: 7%;
   animation: heart-spread-effect 2s ease-out infinite 1s;
 }
-& .heart-3 {
+&.heart-3 {
   top: -48%;
   left: 14%;
   animation: heart-spread-effect 2s ease-out infinite 0.5s;
