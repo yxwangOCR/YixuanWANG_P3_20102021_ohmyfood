@@ -246,7 +246,6 @@
   height: auto;
 }
 
-/* How to remove aria-hidden ="true" on icon? */
 .heart {
   position: relative;
 }
@@ -273,6 +272,29 @@
   color: #9356dc;
   /*No Linear Gradients*/
   opacity: 1;
+}
+
+/* How to remove aria-hidden ="true" on icon? */
+/*.heart{
+    position: relative;
+}
+.empty-heart, .full-heart {
+    position: absolute; /*Two hearts overlapping*/
+/*}
+/*.empty-heart{
+    color: black;
+    opacity: 1;
+}
+.empty-heart:hover{
+    opacity: 0;
+}
+.full-heart{
+    opacity: 0;
+    
+}
+.full-heart:hover{ 
+    color: #9356dc; /*No Linear Gradients*/
+/*  opacity: 1;
 }
 
 /*reference: https://codepen.io/ismailfarooq/pen/wewNxx
@@ -392,8 +414,6 @@ If this property is not set, the value of the color property is used.*/
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   gap: 0.5rem;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
   -webkit-animation-name: card-slidein;
           animation-name: card-slidein;
 }
@@ -422,6 +442,81 @@ If this property is not set, the value of the color property is used.*/
             transform: translateY(0rem);
     opacity: 1;
   }
+}
+
+.restaurant_menu .dishes.dish-1 {
+  -webkit-animation: card-slidein 2s 0s;
+          animation: card-slidein 2s 0s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /*The animation-fill-mode property indicates how a CSS animation should apply styles to its target 
+                before and after execution.
+                What is the difference between 'both' and 'forwards'?*/
+}
+
+.restaurant_menu .dishes.dish-2 {
+  -webkit-animation: card-slidein 2s 250ms;
+          animation: card-slidein 2s 250ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.restaurant_menu .dishes.dish-3 {
+  -webkit-animation: card-slidein 2s 500ms;
+          animation: card-slidein 2s 500ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.restaurant_menu .dishes.dish-4 {
+  -webkit-animation: card-slidein 2s 750ms;
+          animation: card-slidein 2s 750ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.restaurant_menu .dishes.dish-5 {
+  -webkit-animation: card-slidein 2s 1s;
+          animation: card-slidein 2s 1s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.restaurant_menu .dishes.dish-6 {
+  -webkit-animation: card-slidein 2s 1250ms;
+          animation: card-slidein 2s 1250ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.restaurant_menu .dishes.dish-7 {
+  -webkit-animation: card-slidein 2s 1.5s;
+          animation: card-slidein 2s 1.5s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.restaurant_menu .dishes.dish-8 {
+  -webkit-animation: card-slidein 2s 1750ms;
+          animation: card-slidein 2s 1750ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.restaurant_menu .dishes.dish-9 {
+  -webkit-animation: card-slidein 2s 2000ms;
+          animation: card-slidein 2s 2000ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .restaurant_menu .price {

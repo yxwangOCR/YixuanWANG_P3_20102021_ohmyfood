@@ -326,8 +326,19 @@ If this property is not set, the value of the color property is used.*/
                 padding: 1rem 0 1rem 1rem;
                 flex: 1 1 auto;
                 gap: 0.5rem;
-        & .dish-1{
-                animation: card-slidein 9s;
+                animation-name: card-slidein;
+                @keyframes card-slidein { 
+                    from{
+                       transform: translateY(1rem);
+                       opacity: 0;
+                     }
+                     to{
+                       transform: translateY(0rem);
+                       opacity: 1;
+                     }
+               }       
+        &.dish-1{
+                animation: card-slidein 2s 0s;
                 opacity: 0;
                 animation-fill-mode: forwards; 
                 /*The animation-fill-mode property indicates how a CSS animation should apply styles to its target 
@@ -335,64 +346,53 @@ If this property is not set, the value of the color property is used.*/
                 What is the difference between 'both' and 'forwards'?*/
         }
 
-        & .dish-2{
-                animation: card-slidein 9s 1s;
+        &.dish-2{
+                animation: card-slidein 2s 250ms;
                 opacity: 0;
                 animation-fill-mode: forwards; 
         }
 
-        & .dish-3{
-            animation: card-slidein 9s 2s;
+        &.dish-3{
+            animation: card-slidein 2s 500ms;
             opacity: 0;
             animation-fill-mode: forwards; 
         }
 
-        & .dish-4{
-            animation: card-slidein 9s 3s;
+        &.dish-4{
+            animation: card-slidein 2s 750ms;
             opacity: 0;
             animation-fill-mode: forwards; 
         }
 
-        & .dish-5{
-            animation: card-slidein 9s 4s;
+        &.dish-5{
+            animation: card-slidein 2s 1s;
             opacity: 0;
             animation-fill-mode: forwards; 
         }
 
-        & .dish-6{
-            animation: card-slidein 9s 5s;
+        &.dish-6{
+            animation: card-slidein 2s 1250ms;
             opacity: 0;
             animation-fill-mode: forwards; 
         }
 
-        & .dish-7{
-            animation: card-slidein 9s 6s;
+        &.dish-7{
+            animation: card-slidein 2s 1.5s;
             opacity: 0;
             animation-fill-mode: forwards; 
         }
 
-        & .dish-8{
-            animation: card-slidein 9s 7s;
+        &.dish-8{
+            animation: card-slidein 2s 1750ms;
             opacity: 0;
             animation-fill-mode: forwards; 
         }
 
-        & .dish-9{
-            animation: card-slidein 9s 8s;
+        &.dish-9{
+            animation: card-slidein 2s 2000ms;
             opacity: 0;
             animation-fill-mode: forwards; 
-        }
-
-                @keyframes card-slidein { 
-                     from{
-                        transform: translateY(1rem);
-                        opacity: 0;
-                      }
-                      to{
-                        transform: translateY(0rem);
-                        opacity: 1;
-                      }
-                }        
+        } 
     }
 
     .price{
