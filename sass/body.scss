@@ -101,7 +101,7 @@ a:hover {
   border-radius: 0 0 22px 22px;
   height: auto;
 }
-/*Heart Animation*/
+/*Heart-beat Animation*/
 .heart {
   position: relative;
 }
@@ -113,6 +113,7 @@ a:hover {
   opacity: 0;
 }
 .full-heart:hover {
+  cursor: pointer;
   background: -webkit-gradient(
     linear,
     left top,
@@ -124,12 +125,10 @@ a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
-  transition: 500ms ease-in-out;
-  transform-origin:bottom;
   /*transform: scale(1.1);*/
-  /*animation: heart-beat 200ms infinite alternate;
+  animation: heart-beat 200ms infinite alternate;
   /*If don’t need a continuous heartbeat, delete ‘infinite alternate’ and keep above 'transform: scale(1.1)'*/
-  /*@keyframes heart-beat {
+  @keyframes heart-beat {
     from {
       transform: scale(1.1);
     }
@@ -148,8 +147,8 @@ a:hover {
 .page-head {
   & .fa-arrow-left {
     position: absolute; /*The arrow is fixed to the left (箭头固定在左边)*/
-    padding: 1rem 1rem;
-    left: 2rem;
+    padding: 1rem;
+    left: 1rem;
     font-size: 1.5rem;
     color: black;
   }
@@ -168,60 +167,31 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   & .restaurant-name {
+    width: 100%;
+    padding: 1rem;
     & h1 {
       /*Title is fixed to the left*/
       position: absolute;
-      padding: 1rem 1rem;
       left: 2rem;
+      top: 1.4rem;
       font-family: "Shrikhand", cursive;
     }
-    & .heart-spread {
-      position: absolute; /*Heart is fixed to the right*/
-      padding: 1rem 1rem;
-      right: 2rem;
-
-      & .heart-blank,
-      .heart-filled {
-        position: absolute;
-      }
-      & .heart-filled {
-        opacity: 0;
-      }
-      & .heart-filled:hover {
-        background: -webkit-gradient(
-          linear,
-          left top,
-          left bottom,
-          from(#9356dc),
-          to(#ff79da)
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 1;
-        transform: scale(1.1);
-      }
-    }
   }
-
   & .menu-content-container {
     display: flex;
-    gap: 1rem;
-    padding: 1rem;
     height: auto;
     width: 100%;
-    @media (max-width: 980px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
       align-items: center;
     }
     & .menu-content {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
-      margin: 1rem;
-      padding: 2rem;
+      gap: 1rem;
+      padding: 2rem 1rem 0 1rem;
       width: 100%;
       & h3 {
         border-bottom: 4px solid #99e2d0;
@@ -233,19 +203,50 @@ a:hover {
   }
 }
 
+/*Heart animation : */
+.heart-spread {
+  position: absolute; /*Heart is fixed to the right*/
+  right: 3rem;
+
+  & .heart-blank,
+  .heart-filled {
+    position: absolute;
+  }
+  & .heart-filled {
+    opacity: 0;
+  }
+  & .heart-filled:hover {
+    cursor: pointer;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#9356dc),
+      to(#ff79da)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
 /*Animation dishes*/
 .dishes {
   border-radius: 22px;
-  height: 5rem;
+  width: 100%;
+  height: 25%;
   background-color: white;
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0 1rem 1rem;
   flex: 1 1 auto;
   gap: 0.5rem;
+  animation-duration: 2.5s;
   animation-name: card-slidein;
+  overflow: hidden;
   @keyframes card-slidein {
     from {
       transform: translateY(1rem);
@@ -257,7 +258,7 @@ a:hover {
     }
   }
   &.dish-1 {
-    animation: card-slidein 2s 0s;
+    animation: card-slidein 2.5s 0s;
     opacity: 0;
     animation-fill-mode: forwards;
     /*The animation-fill-mode property indicates how a CSS animation should apply styles 
@@ -266,66 +267,92 @@ a:hover {
   }
 
   &.dish-2 {
-    animation: card-slidein 2s 250ms;
+    animation: card-slidein 2.5s 500ms;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 
   &.dish-3 {
-    animation: card-slidein 2s 500ms;
+    animation: card-slidein 2.5s 750ms;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 
   &.dish-4 {
-    animation: card-slidein 2s 750ms;
+    animation: card-slidein 2.5s 1s;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 
   &.dish-5 {
-    animation: card-slidein 2s 1s;
+    animation: card-slidein 2.5s 1250ms;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 
   &.dish-6 {
-    animation: card-slidein 2s 1250ms;
+    animation: card-slidein 2.5s 1500ms;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 
   &.dish-7 {
-    animation: card-slidein 2s 1.5s;
+    animation: card-slidein 2.5s 1750ms;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 
   &.dish-8 {
-    animation: card-slidein 2s 1750ms;
+    animation: card-slidein 2.5s 2000ms;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 
   &.dish-9 {
-    animation: card-slidein 2s 2000ms;
+    animation: card-slidein 2.5s 2250ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  &.dish-10 {
+    animation: card-slidein 2.5s 2500ms;
     opacity: 0;
     animation-fill-mode: forwards;
   }
 }
 
 .price {
+  width: 3rem;
   padding: 1rem;
 }
 
+.card-text {
+  width: 100%;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /*white-space: nowrap;*/
+  & p {
+    font-size: 0.9rem;
+    @media (max-width: 450px) {
+      font-size: 0.6rem;
+    }
+  }
+  & .sub-title {
+    font-size: 0.7rem;
+  }
+}
+
+/*Green bloc animation*/
 .green-bloc {
   background-color: #99e2d0;
   color: white;
   border-radius: 0 22px 22px 0;
   width: 5rem;
-  height: 5rem;
+  height: 100%;
   padding: 2rem;
-  display: none;
+  margin-right: -5rem;
+  transition-duration: 500ms;
 }
 .dishes:hover {
   cursor: pointer;
@@ -342,19 +369,7 @@ a:hover {
     }
   }
   .green-bloc {
-    display: inline-block;
-    animation-duration: 500ms;
-    animation-name: bloc-slidein;
-    @keyframes bloc-slidein {
-      from {
-        transform: translateX(0.3rem);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0rem);
-        opacity: 1;
-      }
-    }
+    margin-right: 0rem;
   }
 }
 /*Order Button*/
@@ -368,5 +383,6 @@ a:hover {
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
 }
 .order-button:hover {
+  cursor: pointer;
   transform: scale(1.1);
 }

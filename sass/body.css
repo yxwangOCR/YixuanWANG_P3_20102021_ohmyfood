@@ -152,7 +152,7 @@ a:hover {
   height: auto;
 }
 
-/*Heart Animation*/
+/*Heart-beat Animation*/
 .heart {
   position: relative;
 }
@@ -168,13 +168,12 @@ a:hover {
 }
 
 .full-heart:hover {
+  cursor: pointer;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
   /*transform: scale(1.1);*/
   -webkit-animation: heart-beat 200ms infinite alternate;
           animation: heart-beat 200ms infinite alternate;
@@ -213,8 +212,8 @@ a:hover {
 .page-head .fa-arrow-left {
   position: absolute;
   /*The arrow is fixed to the left (箭头固定在左边)*/
-  padding: 1rem 1rem;
-  left: 2rem;
+  padding: 1rem;
+  left: 1rem;
   font-size: 1.5rem;
   color: black;
 }
@@ -239,54 +238,31 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.restaurant_menu .restaurant-name {
+  width: 100%;
+  padding: 1rem;
 }
 
 .restaurant_menu .restaurant-name h1 {
   /*Title is fixed to the left*/
   position: absolute;
-  padding: 1rem 1rem;
   left: 2rem;
+  top: 1.4rem;
   font-family: "Shrikhand", cursive;
-}
-
-.restaurant_menu .restaurant-name .heart-spread {
-  position: absolute;
-  /*Heart is fixed to the right*/
-  padding: 1rem 1rem;
-  right: 2rem;
-}
-
-.restaurant_menu .restaurant-name .heart-spread .heart-blank,
-.restaurant_menu .restaurant-name .heart-spread .heart-filled {
-  position: absolute;
-}
-
-.restaurant_menu .restaurant-name .heart-spread .heart-filled {
-  opacity: 0;
-}
-
-.restaurant_menu .restaurant-name .heart-spread .heart-filled:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .restaurant_menu .menu-content-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
   height: auto;
   width: 100%;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
   .restaurant_menu .menu-content-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -306,9 +282,8 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2rem;
-  margin: 1rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 2rem 1rem 0 1rem;
   width: 100%;
 }
 
@@ -319,10 +294,38 @@ a:hover {
   width: 2.5rem;
 }
 
+/*Heart animation : */
+.heart-spread {
+  position: absolute;
+  /*Heart is fixed to the right*/
+  right: 3rem;
+}
+
+.heart-spread .heart-blank,
+.heart-spread .heart-filled {
+  position: absolute;
+}
+
+.heart-spread .heart-filled {
+  opacity: 0;
+}
+
+.heart-spread .heart-filled:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 /*Animation dishes*/
 .dishes {
   border-radius: 22px;
-  height: 5rem;
+  width: 100%;
+  height: 25%;
   background-color: white;
   -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
@@ -335,13 +338,15 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem 0 1rem 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   gap: 0.5rem;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
   -webkit-animation-name: card-slidein;
           animation-name: card-slidein;
+  overflow: hidden;
 }
 
 @-webkit-keyframes card-slidein {
@@ -371,8 +376,8 @@ a:hover {
 }
 
 .dishes.dish-1 {
-  -webkit-animation: card-slidein 2s 0s;
-          animation: card-slidein 2s 0s;
+  -webkit-animation: card-slidein 2.5s 0s;
+          animation: card-slidein 2.5s 0s;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -382,81 +387,115 @@ a:hover {
 }
 
 .dishes.dish-2 {
-  -webkit-animation: card-slidein 2s 250ms;
-          animation: card-slidein 2s 250ms;
+  -webkit-animation: card-slidein 2.5s 500ms;
+          animation: card-slidein 2.5s 500ms;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .dishes.dish-3 {
-  -webkit-animation: card-slidein 2s 500ms;
-          animation: card-slidein 2s 500ms;
+  -webkit-animation: card-slidein 2.5s 750ms;
+          animation: card-slidein 2.5s 750ms;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .dishes.dish-4 {
-  -webkit-animation: card-slidein 2s 750ms;
-          animation: card-slidein 2s 750ms;
+  -webkit-animation: card-slidein 2.5s 1s;
+          animation: card-slidein 2.5s 1s;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .dishes.dish-5 {
-  -webkit-animation: card-slidein 2s 1s;
-          animation: card-slidein 2s 1s;
+  -webkit-animation: card-slidein 2.5s 1250ms;
+          animation: card-slidein 2.5s 1250ms;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .dishes.dish-6 {
-  -webkit-animation: card-slidein 2s 1250ms;
-          animation: card-slidein 2s 1250ms;
+  -webkit-animation: card-slidein 2.5s 1500ms;
+          animation: card-slidein 2.5s 1500ms;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .dishes.dish-7 {
-  -webkit-animation: card-slidein 2s 1.5s;
-          animation: card-slidein 2s 1.5s;
+  -webkit-animation: card-slidein 2.5s 1750ms;
+          animation: card-slidein 2.5s 1750ms;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .dishes.dish-8 {
-  -webkit-animation: card-slidein 2s 1750ms;
-          animation: card-slidein 2s 1750ms;
+  -webkit-animation: card-slidein 2.5s 2000ms;
+          animation: card-slidein 2.5s 2000ms;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .dishes.dish-9 {
-  -webkit-animation: card-slidein 2s 2000ms;
-          animation: card-slidein 2s 2000ms;
+  -webkit-animation: card-slidein 2.5s 2250ms;
+          animation: card-slidein 2.5s 2250ms;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.dishes.dish-10 {
+  -webkit-animation: card-slidein 2.5s 2500ms;
+          animation: card-slidein 2.5s 2500ms;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .price {
+  width: 3rem;
   padding: 1rem;
 }
 
+.card-text {
+  width: 100%;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /*white-space: nowrap;*/
+}
+
+.card-text p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 450px) {
+  .card-text p {
+    font-size: 0.6rem;
+  }
+}
+
+.card-text .sub-title {
+  font-size: 0.7rem;
+}
+
+/*Green bloc animation*/
 .green-bloc {
   background-color: #99e2d0;
   color: white;
   border-radius: 0 22px 22px 0;
   width: 5rem;
-  height: 5rem;
+  height: 100%;
   padding: 2rem;
-  display: none;
+  margin-right: -5rem;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 .dishes:hover {
@@ -493,37 +532,7 @@ a:hover {
 }
 
 .dishes:hover .green-bloc {
-  display: inline-block;
-  -webkit-animation-duration: 500ms;
-          animation-duration: 500ms;
-  -webkit-animation-name: bloc-slidein;
-          animation-name: bloc-slidein;
-}
-
-@-webkit-keyframes bloc-slidein {
-  from {
-    -webkit-transform: translateX(0.3rem);
-            transform: translateX(0.3rem);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0rem);
-            transform: translateX(0rem);
-    opacity: 1;
-  }
-}
-
-@keyframes bloc-slidein {
-  from {
-    -webkit-transform: translateX(0.3rem);
-            transform: translateX(0.3rem);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0rem);
-            transform: translateX(0rem);
-    opacity: 1;
-  }
+  margin-right: 0rem;
 }
 
 /*Order Button*/
@@ -540,6 +549,7 @@ a:hover {
 }
 
 .order-button:hover {
+  cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
