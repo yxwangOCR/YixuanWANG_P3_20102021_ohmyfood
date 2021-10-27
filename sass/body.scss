@@ -124,10 +124,12 @@ a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
+  transition: 500ms ease-in-out;
+  transform-origin:bottom;
   /*transform: scale(1.1);*/
-  animation: heart-beat 200ms infinite alternate;
+  /*animation: heart-beat 200ms infinite alternate;
   /*If don’t need a continuous heartbeat, delete ‘infinite alternate’ and keep above 'transform: scale(1.1)'*/
-  @keyframes heart-beat {
+  /*@keyframes heart-beat {
     from {
       transform: scale(1.1);
     }

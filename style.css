@@ -291,6 +291,8 @@ a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
   /*transform: scale(1.1);*/
   -webkit-animation: heart-beat 200ms infinite alternate;
           animation: heart-beat 200ms infinite alternate;
