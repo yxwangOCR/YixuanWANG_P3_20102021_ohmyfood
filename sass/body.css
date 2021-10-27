@@ -17,11 +17,12 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 0.9;
-  -webkit-animation: page-out 1s 2.5s linear both;
-          animation: page-out 1s 2.5s linear both;
+  -webkit-animation: page-out 1s 2.5s linear forwards;
+          animation: page-out 1s 2.5s linear forwards;
 }
 
 @-webkit-keyframes page-out {
+  /*The loading-page moves up after a delay of 2.5 seconds*/
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -33,6 +34,7 @@
 }
 
 @keyframes page-out {
+  /*The loading-page moves up after a delay of 2.5 seconds*/
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -55,12 +57,14 @@
   -webkit-animation: text-gradient 2s linear infinite;
           animation: text-gradient 2s linear infinite;
   background-clip: text;
+  /*Define the background of the element on the text*/
   -webkit-background-clip: text;
 }
 
 @-webkit-keyframes text-gradient {
   0% {
     background-position-x: 0;
+    /*背景相对于原点的位置 The position of the background relative to the origin*/
   }
   100% {
     background-position-x: 60rem;
@@ -70,6 +74,7 @@
 @keyframes text-gradient {
   0% {
     background-position-x: 0;
+    /*背景相对于原点的位置 The position of the background relative to the origin*/
   }
   100% {
     background-position-x: 60rem;
@@ -237,6 +242,7 @@ a:hover {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  /*fix the tag on upper right corner*/
   background-color: #99e2d0;
   color: #008766;
   font-size: 0.8rem;
@@ -407,7 +413,7 @@ a:hover {
   width: 2.5rem;
 }
 
-/*Heart animation : */
+/*Heart beat animation : */
 .heart-spread {
   position: absolute;
   /*Heart is fixed to the right*/
@@ -445,6 +451,10 @@ a:hover {
   }
 }
 
+/*reference : 
+https://developer.mozilla.org/fr/docs/Web/CSS/animation
+https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate: 轮流
+*/
 /*Animation dishes*/
 .dishes {
   border-radius: 22px;
@@ -505,9 +515,9 @@ a:hover {
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  /*The animation-fill-mode property indicates how a CSS animation should apply styles 
-                to its target before and after execution.
-                What is the difference between 'both' and 'forwards'?*/
+  /*The animation-fill-mode property indicates how a CSS animation should apply styles to its target before and after execution.
+      What is the difference between 'both' and 'forwards'? 动画将遵循适用于向前和向后的规则，从而导致动画属性在两个方向上延伸。
+      reference: https://developer.mozilla.org/fr/docs/Web/CSS/animation-fill-mode*/
 }
 
 .dishes.dish-2 {
@@ -592,6 +602,7 @@ a:hover {
   height: 100%;
   padding: 1rem;
   text-overflow: ellipsis;
+  /*NOT work*/
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -603,7 +614,7 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /*white-space: nowrap;*/
+  /*white-space: nowrap; ==> barre de defilement horizontale*/
 }
 
 @media (max-width: 450px) {
@@ -634,6 +645,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   margin-right: -5rem;
+  /*避免菜单tag的长度随animation变动 Avoid changing the length of the menu tag with green-bloc animation*/
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
 }
@@ -675,6 +687,7 @@ a:hover {
   margin-right: 0rem;
 }
 
+/*reference: https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes/6340919-creez-des-animations-fluides-avec-la-propriete-css-transform*/
 /*Order Button*/
 .order-button {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#eb73da), to(#a05adc));

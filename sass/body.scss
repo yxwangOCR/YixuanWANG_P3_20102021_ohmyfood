@@ -10,9 +10,10 @@
   justify-content: center;
   align-items: center;
   opacity: 0.9;
-  animation: page-out 1s 2.5s linear both;
+  animation: page-out 1s 2.5s linear forwards;
 }
 @keyframes page-out {
+  /*The loading-page moves up after a delay of 2.5 seconds*/
   0% {
     transform: translateY(0);
   }
@@ -38,12 +39,12 @@
     #1e5799
   );
   animation: text-gradient 2s linear infinite;
-  background-clip: text;
+  background-clip: text; /*Define the background of the element on the text*/
   -webkit-background-clip: text;
 }
 @keyframes text-gradient {
   0% {
-    background-position-x: 0;
+    background-position-x: 0; /*背景相对于原点的位置 The position of the background relative to the origin*/
   }
   100% {
     background-position-x: 60rem;
@@ -158,7 +159,7 @@ a:hover {
   & .new-tag {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1rem; /*fix the tag on upper right corner*/
     background-color: #99e2d0;
     color: #008766;
     font-size: 0.8rem;
@@ -281,7 +282,7 @@ a:hover {
   }
 }
 
-/*Heart animation : */
+/*Heart beat animation : */
 .heart-spread {
   position: absolute; /*Heart is fixed to the right*/
   right: 3rem;
@@ -317,6 +318,10 @@ a:hover {
     }
   }
 }
+/*reference : 
+https://developer.mozilla.org/fr/docs/Web/CSS/animation
+https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate: 轮流
+*/
 
 /*Animation dishes*/
 .dishes {
@@ -347,9 +352,9 @@ a:hover {
     animation: card-slidein 2.5s 0s;
     opacity: 0;
     animation-fill-mode: forwards;
-    /*The animation-fill-mode property indicates how a CSS animation should apply styles 
-                to its target before and after execution.
-                What is the difference between 'both' and 'forwards'?*/
+    /*The animation-fill-mode property indicates how a CSS animation should apply styles to its target before and after execution.
+      What is the difference between 'both' and 'forwards'? 动画将遵循适用于向前和向后的规则，从而导致动画属性在两个方向上延伸。
+      reference: https://developer.mozilla.org/fr/docs/Web/CSS/animation-fill-mode*/
   }
 
   &.dish-2 {
@@ -416,12 +421,12 @@ a:hover {
   width: 100%;
   height: 100%;
   padding: 1rem;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /*NOT work*/
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*white-space: nowrap;*/
+  /*white-space: nowrap; ==> barre de defilement horizontale*/
   & p {
     @media (max-width: 450px) {
       font-size: 0.9rem;
@@ -443,7 +448,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -5rem;
+  margin-right: -5rem; /*避免菜单tag的长度随animation变动 Avoid changing the length of the menu tag with green-bloc animation*/
   transition-duration: 500ms;
 }
 .dishes:hover {
@@ -464,6 +469,8 @@ a:hover {
     margin-right: 0rem;
   }
 }
+/*reference: https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes/6340919-creez-des-animations-fluides-avec-la-propriete-css-transform*/
+
 /*Order Button*/
 .order-button {
   background-image: linear-gradient(to bottom, #eb73da, #a05adc);
