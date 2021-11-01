@@ -179,7 +179,7 @@ a:hover {
     font-size: 0.8rem;
   }
 }
-/*Heart-beat Animation*/
+/*Heart-beat Animation on home page*/
 .heart {
   position: relative;
   right: 1rem;
@@ -188,6 +188,8 @@ a:hover {
 .full-heart {
   position: absolute; /*Two hearts overlapping*/
 }
+/*2 hearts tuto reference: https://www.youtube.com/watch?v=i6QiDxujUgs*/
+
 .full-heart {
   opacity: 0;
 }
@@ -204,25 +206,27 @@ a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
-  /*transform: scale(1.1);*/
-  animation: heart-beat 200ms infinite alternate;
-  /*If don’t need a continuous heartbeat, delete ‘infinite alternate’ and keep above 'transform: scale(1.1)'*/
+  animation: heart-beat 200ms;
+  animation-fill-mode: forwards; /*Will not return to the original state*/
+  /*animation-fill-mode: both;的区别？
+  reference: https://developer.mozilla.org/fr/docs/Web/CSS/animation-fill-mode*/
   @keyframes heart-beat {
     from {
-      transform: scale(1.1);
+      transform: scale(0.1);
     }
     to {
       transform: scale(1.3);
     }
   }
 }
+
 /*reference: https://codepen.io/fivera/pen/rzepn*/
 /* How to remove aria-hidden ="true" on icon? */
 /*reference: https://codepen.io/ismailfarooq/pen/wewNxx
 
 
-/**** Other pages : Restaurants menus ****/
-/*Page Header*/
+/********* Other pages : Restaurants menus *********/
+/***********Page Header***********/
 .page-head {
   & .fa-arrow-left {
     position: absolute; /*The arrow is fixed to the left (箭头固定在左边)*/
@@ -233,7 +237,7 @@ a:hover {
   }
 }
 
-/*Page body*/
+/*********** Page body ***********/
 .restaurant_menu {
   background-color: #f6f6f6;
   width: 100%;
@@ -282,7 +286,7 @@ a:hover {
   }
 }
 
-/*Heart beat animation : */
+/*Heart beat animation on other pages: */
 .heart-spread {
   position: absolute; /*Heart is fixed to the right*/
   right: 3rem;
@@ -304,13 +308,13 @@ a:hover {
       to(#ff79da)
     );
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: text; /*sets whether an element's background extends underneath its border box, padding box, or content box.*/
     -webkit-text-fill-color: transparent;
     opacity: 1;
-    animation: heart-beat 200ms infinite alternate;
+    animation: heart-beat 200ms;
     @keyframes heart-beat {
       from {
-        transform: scale(1.1);
+        transform: scale(0.1);
       }
       to {
         transform: scale(1.3);
@@ -319,6 +323,7 @@ a:hover {
   }
 }
 /*reference : 
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip ==> background-clip: text;
 https://developer.mozilla.org/fr/docs/Web/CSS/animation
 https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate: 轮流
 */
