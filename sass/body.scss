@@ -171,14 +171,19 @@ a:hover {
   background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   color: black;
   border-radius: 0 0 22px 22px;
   height: auto;
   @media (max-width: 250px) {
     font-size: 0.8rem;
   }
+
+  & .sub-title {
+    font-size: 0.8rem;
+  }
 }
+
 /*Heart-beat Animation on home page*/
 .heart {
   position: relative;

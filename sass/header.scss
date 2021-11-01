@@ -32,6 +32,9 @@ nav {
   & h2 {
     margin: 1rem;
   }
+  & p {
+    color: gray;
+  }
   & button {
     background-image: linear-gradient(to bottom, #eb73da, #a05adc);
     border-radius: 22px;

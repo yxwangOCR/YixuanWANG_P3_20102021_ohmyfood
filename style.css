@@ -72,6 +72,10 @@ nav img {
   margin: 1rem;
 }
 
+.intro p {
+  color: gray;
+}
+
 .intro button {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#eb73da), to(#a05adc));
   background-image: linear-gradient(to bottom, #eb73da, #a05adc);
@@ -376,7 +380,7 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   color: black;
   border-radius: 0 0 22px 22px;
   height: auto;
@@ -386,6 +390,10 @@ a:hover {
   .restaurant-title {
     font-size: 0.8rem;
   }
+}
+
+.restaurant-title .sub-title {
+  font-size: 0.8rem;
 }
 
 /*Heart-beat Animation on home page*/
