@@ -752,8 +752,16 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
 }
 
 @media (max-width: 450px) {
-  .card-text p {
+  .card-text strong {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .card-text strong {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 

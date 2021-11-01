@@ -438,9 +438,14 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
     width: 70%;
   }
 
-  & p {
+  & strong {
     @media (max-width: 450px) {
       font-size: 0.9rem;
+    }
+    @media (max-width: 350px) {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
   & .sub-title {
