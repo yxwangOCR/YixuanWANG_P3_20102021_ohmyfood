@@ -447,6 +447,8 @@ a:hover {
   opacity: 1;
   -webkit-animation: heart-beat 200ms;
           animation: heart-beat 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @keyframes heart-beat {
@@ -722,6 +724,12 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
   border: 0px;
   -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: scale(1);
+  transition: scale(1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .order-button:hover {

@@ -317,6 +317,7 @@ a:hover {
     -webkit-text-fill-color: transparent;
     opacity: 1;
     animation: heart-beat 200ms;
+    animation-fill-mode: forwards;
     @keyframes heart-beat {
       from {
         transform: scale(0.1);
@@ -499,6 +500,8 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
   color: white;
   border: 0px;
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  transition: scale(1);
+  transition: transform 0.5s;
 }
 .order-button:hover {
   cursor: pointer;
