@@ -230,7 +230,7 @@ a:hover {
   padding: 1rem 0;
   gap: 2rem;
 }
-@media (max-width: 970px) {
+@media (max-width: 1024px) {
   .restaurant-card-list {
     flex-direction: column;
     align-items: center;
