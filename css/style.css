@@ -125,15 +125,7 @@ nav img {
   font-family: "Shrikhand", cursive;
   z-index: 2;
   color: transparent;
-  background: linear-gradient(
-    to left,
-    #1e5799,
-    #2ce0bf,
-    #76dd2c,
-    #dba62b,
-    #e02cbf,
-    #1e5799
-  );
+  background: linear-gradient(to left, #1e5799, #2ce0bf, #76dd2c, #dba62b, #e02cbf, #1e5799);
   animation: text-gradient 2s linear infinite;
   background-clip: text;
   /*Define the background of the element on the text*/
@@ -321,13 +313,7 @@ a:hover {
 
 .full-heart:hover {
   cursor: pointer;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#9356dc),
-    to(#ff79da)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -447,13 +433,7 @@ a:hover {
 }
 .heart-spread .heart-filled:hover {
   cursor: pointer;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#9356dc),
-    to(#ff79da)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   background-clip: text;
   /*sets whether an element's background extends underneath its border box, padding box, or content box.*/
