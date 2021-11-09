@@ -66,7 +66,7 @@ nav img {
   color: white;
   border: 0px;
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
-  transition: scale(1);
+  transform: scale(1);
   transition: transform 0.5s;
 }
 .intro button:hover {
@@ -125,7 +125,15 @@ nav img {
   font-family: "Shrikhand", cursive;
   z-index: 2;
   color: transparent;
-  background: linear-gradient(to left, #1e5799, #2ce0bf, #76dd2c, #dba62b, #e02cbf, #1e5799);
+  background: linear-gradient(
+    to left,
+    #1e5799,
+    #2ce0bf,
+    #76dd2c,
+    #dba62b,
+    #e02cbf,
+    #1e5799
+  );
   animation: text-gradient 2s linear infinite;
   background-clip: text;
   /*Define the background of the element on the text*/
@@ -313,7 +321,13 @@ a:hover {
 
 .full-heart:hover {
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9356dc),
+    to(#ff79da)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -414,7 +428,6 @@ a:hover {
 }
 .restaurant_menu .menu-content-container .menu-content h3 {
   border-bottom: 4px solid #99e2d0;
-  border-bottom-width: auto;
   padding-bottom: 4px;
   width: 2.5rem;
 }
@@ -434,7 +447,13 @@ a:hover {
 }
 .heart-spread .heart-filled:hover {
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9356dc),
+    to(#ff79da)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   /*sets whether an element's background extends underneath its border box, padding box, or content box.*/
@@ -623,7 +642,7 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
   color: white;
   border: 0px;
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
-  transition: scale(1);
+  transform: scale(1);
   transition: transform 0.5s;
 }
 
