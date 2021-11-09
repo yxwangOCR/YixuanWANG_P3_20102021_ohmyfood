@@ -239,6 +239,9 @@ a:hover {
     left: 1rem;
     font-size: 1.5rem;
     color: black;
+    @media (max-width: 300px) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -257,8 +260,13 @@ a:hover {
   align-items: center;
   padding: 1rem;
   & .restaurant-name {
-    width: 100%;
     padding: 1rem;
+    @media (max-width: 303px) {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 260px) {
+      font-size: 0.5rem;
+    }
     & h1 {
       /*Title is fixed to the left*/
       position: absolute;

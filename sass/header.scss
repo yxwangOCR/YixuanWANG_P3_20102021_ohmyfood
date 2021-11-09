@@ -6,6 +6,9 @@ nav {
   & img {
     padding: 1rem;
     width: 11rem;
+    @media (max-width: 300px) {
+      width: 8rem;
+    }
   }
   @media (max-width: 768px) {
     flex-direction: column;

@@ -21,6 +21,11 @@ nav img {
   padding: 1rem;
   width: 11rem;
 }
+@media (max-width: 300px) {
+  nav img {
+    width: 8rem;
+  }
+}
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -338,6 +343,11 @@ a:hover {
   font-size: 1.5rem;
   color: black;
 }
+@media (max-width: 300px) {
+  .page-head .fa-arrow-left {
+    font-size: 1rem;
+  }
+}
 
 /*********** Page body ***********/
 .restaurant_menu {
@@ -355,8 +365,17 @@ a:hover {
   padding: 1rem;
 }
 .restaurant_menu .restaurant-name {
-  width: 100%;
   padding: 1rem;
+}
+@media (max-width: 303px) {
+  .restaurant_menu .restaurant-name {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 260px) {
+  .restaurant_menu .restaurant-name {
+    font-size: 0.5rem;
+  }
 }
 .restaurant_menu .restaurant-name h1 {
   /*Title is fixed to the left*/
