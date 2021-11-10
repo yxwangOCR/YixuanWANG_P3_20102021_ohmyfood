@@ -486,9 +486,6 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
   animation: card-slidein 2.5s 0s;
   opacity: 0;
   animation-fill-mode: forwards;
-  /*The animation-fill-mode property indicates how a CSS animation should apply styles to its target before and after execution.
-    What is the difference between 'both' and 'forwards'? 动画将遵循适用于向前和向后的规则，从而导致动画属性在两个方向上延伸。
-    reference: https://developer.mozilla.org/fr/docs/Web/CSS/animation-fill-mode*/
 }
 .dishes.dish-2 {
   animation: card-slidein 2.5s 500ms;
@@ -536,6 +533,9 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
   animation-fill-mode: forwards;
 }
 
+/*The animation-fill-mode property indicates how a CSS animation should apply styles to its target before and after execution.
+      What is the difference between 'both' and 'forwards'? 动画将遵循适用于向前和向后的规则，从而导致动画属性在两个方向上延伸。
+      reference: https://developer.mozilla.org/fr/docs/Web/CSS/animation-fill-mode*/
 .price {
   width: 3rem;
   padding: 1rem 1rem 0 1rem;
