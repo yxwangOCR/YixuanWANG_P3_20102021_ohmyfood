@@ -131,7 +131,7 @@ a:hover {
 .restaurant-container {
   padding: 3rem 2rem;
   background-color: #f6f6f6;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .restaurant-card-list {
@@ -252,7 +252,7 @@ a:hover {
 .restaurant_menu {
   background-color: #f6f6f6;
   width: 100%;
-  height: auto;
+  min-height: 68vh;
   border-radius: 50px 50px 0 0;
   position: relative;
   z-index: 1;
@@ -512,7 +512,7 @@ https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction  =>> alternate
   background-image: linear-gradient(to bottom, #eb73da, #a05adc);
   border-radius: 22px;
   padding: 0.8rem 2rem;
-  margin: 1rem;
+  margin-top: 5rem;
   color: white;
   border: 0px;
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
