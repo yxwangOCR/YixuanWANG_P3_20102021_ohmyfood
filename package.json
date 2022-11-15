@@ -6,7 +6,7 @@
   "scripts": {
     "sass": "sass --watch ./sass/style.scss:css/style.css"
   },
-  "author": "王逸萱",
+  "author": "yixuanWANG",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.43.2"
